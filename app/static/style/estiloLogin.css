@@ -1,0 +1,105 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(rgb(45, 6, 49), #56216e 60%, #871aa8);
+    margin: 0;
+	height: 100vh;
+    display: flex;
+    font-family: cursive;
+}
+.cabecalho{
+    position: absolute;
+}
+
+.cabecalho img{
+    height: 90px;
+    width: 241px;
+}
+
+.conteiner{
+    width: 460px;
+    height: 620px;
+    border: inset rgb(241, 218, 255) 2px;
+    border-radius: 0 10px 0 5%;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    margin: auto;
+    display: flex;
+}
+
+.titulo{
+    position: absolute;
+    width: 100%;
+    border-radius: 0 7px 0 0;
+    text-align: center;
+    height: auto;
+}
+
+#h3Titulo {
+    background-color: rgb(241, 218, 255);
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    border-radius: 0 7px 0 0;
+    font-family: cursive;
+}
+
+.titulo img{
+    height: 90px;
+    width: 241px;
+}
+
+.formCadastro:not(.btnEntrar){
+    margin: auto 20px;
+    position: relative;
+    color: rgb(241, 218, 255);
+    text-align: left;
+    width: 100%;
+}
+
+.marginBotom{
+    margin-bottom: 20px;
+}
+
+.inputCadastro{
+    color:white;
+    font-size: 20px;
+    margin-top: 2px;
+    height: 40px;
+    background: rgb(51, 49, 51);
+    border: none;
+    text-indent: 5px;
+    width: 100%;
+    border-radius: 0 10px 0 10px;
+}
+
+.inputCadastro:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.nomeInput{
+    font-size: 1.2em;
+}
+.botoes{
+    margin-top: 20px;
+}
+
+#btnEntrar{
+    border-radius: 0 10px 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 2% 4%;
+    width: 100%;
+    cursor: pointer;
+    font-family: cursive;
+}
+
+#btnEntrar:hover{
+    background-color: #61027e;
+    transition: 300ms;
+}

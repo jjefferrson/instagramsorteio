@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style/estiloLogin.css')}}">
+</head>
+<body>
+    <div class="cabecalho">
+        <a href="/index"><img src="{{url_for('static', filename='imagens/logo3.png')}}" alt="Logo"></a>
+    </div>
+        {% set mensagens = get_flashed_messages() %}
+        {% if mensagens %}
+            <div>
+                {%for msg in mensagens: %}
+                    <h2 style="background-color:white; position: absolute;">{{msg}}</h2>
+                {% endfor %}
+            </div>
+        {% endif %}
+   
+
+    <div class="conteiner">
+        <div class="titulo">
+            <h3 id="h3Titulo">FAÇA LOGIN NA SUA CONTA</h3>
+            <a href="/index"><img src="{{url_for('static', filename='imagens/logo3.png')}}" alt="Logo"></a>
+        </div>
+
+        <form class="formCadastro" action="/autenticar" method="POST">
+            <div class="marginBotom">
+                <label for="usuario" class="nomeInput">NOME DE USUARIO OU EMAIL:</label><br>
+                <input id="usuario" class="inputCadastro" type="text" name="nome_usuario">
+            </div>
+            <label for="senha" class="nomeInput">SENHA:</label><br>
+            <input id="senha" class="inputCadastro" type="text" name="senha"><br>
+
+            <div class="botoes">
+                <button id="btnEntrar" type="submit">Entrar</button>
+            </div>
+    
+        <div>
+            <a href="/cadastro">Ainda não tenho cadastro</a><br>
+            <a href="">Esqueceu a senha?</a>
+        </div>
+            
+        </form>
+    </div>
+
+    <div class="rodape">
+
+    </div>
+
+    
+</body>
+</html>

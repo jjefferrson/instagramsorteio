@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+
+    <div>
+        <form action="/cadastro" method="post">
+            Nome de Usuario<input type="text" name="nome_usuario">
+            Email<input type="email" name="email">
+            Senha:<input type="senha" name="senha">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    {% set mensagens = get_flashed_messages() %}
+        {% if mensagens %}
+            <div>
+                {%for msg in mensagens: %}
+                    <h2 style="background-color:rgb(255, 157, 157); position: absolute;">{{msg}}</h2>
+                {% endfor %}
+            </div>
+        {% endif %}
+    
+</body>
+</html>
